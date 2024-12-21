@@ -1,43 +1,54 @@
-Description
+# Baiscope Auto Downloader
 
-Baiscope Auto Downloader is a Violentmonkey/Tampermonkey user script that enhances your browsing experience on Baiscope.lk. It provides two main features:
+## Overview
+Baiscope Auto Downloader is a user-friendly script designed for [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/) users. It streamlines your experience on [Baiscope.lk](https://www.baiscope.lk/) by automating file downloads and offering quick access to links on the page.
 
-Auto Download Toggle: Automatically finds and downloads files from Baiscope.lk when enabled.
+## Features
 
-Quick Open Links: Opens all URLs found within <td> elements on the page in new tabs with a single click.
+### Auto Download Toggle
+- **Compact Toggle Button**: Displays an "ON/OFF" toggle in the top-right corner.
+- **Persistent State**: Remembers your preference (enabled/disabled) using `localStorage`.
+- **Visual Indicator**: Green for "ON" and red for "OFF".
 
-The script is lightweight and includes an intuitive toggle button for enabling/disabling auto-download functionality, along with a small button for quickly opening multiple links.
+### Quick Open Links
+- **Link Opener Button**: Small button (⬇️) below the toggle.
+- **Bulk Action**: Opens all URLs found within `<td>` elements in new tabs.
 
-Features
+## Installation
 
-Auto Download Toggle:
+1. **Install a Userscript Manager**:
+   - Install [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/) in your browser.
 
-Displays a compact "ON/OFF" button in the top-right corner.
+2. **Add the Script**:
+   - Copy the script from the [Baiscope Auto Downloader Script](./baiscope-downloader.user.js).
+   - Create a new script in your userscript manager and paste the copied code.
 
-Persistent state saved using localStorage.
+3. **Save and Activate**:
+   - Save the script and ensure it is enabled.
 
-Green (ON) or red (OFF) button color indicates the current state.
+## Usage
 
-Quick Open Links:
+1. **Visit Baiscope.lk**:
+   - Navigate to [Baiscope.lk](https://www.baiscope.lk/).
 
-A small down-arrow button below the toggle.
+2. **Enable/Disable Auto Download**:
+   - Use the "ON/OFF" toggle to activate or deactivate automatic downloads.
 
-Opens all <td> links in new tabs for easy navigation.
+3. **Open Links in New Tabs**:
+   - Click the ⬇️ button to open all `<td>` links in new tabs.
 
-Installation
+## How It Works
 
-Install Violentmonkey or Tampermonkey browser extension.
+### Auto Download
+When enabled, the script scans the page for download links matching the pattern `/Downloads/.*?/.*?` and automatically downloads the file.
 
-Copy the script from baiscope-downloader.user.js.
+### Quick Open Links
+The ⬇️ button identifies all links in `<td>` elements on the page and opens them in new tabs, making navigation seamless.
 
-Create a new user script in Violentmonkey/Tampermonkey and paste the script code.
+## Script Details
 
-Save and enable the script.
+- **Name**: Baiscope Auto Downloader
+- **Version**: 1.2
+- **Compatibility**: Violentmonkey/Tampermonkey
+- **Target Site**: [Baiscope.lk](https://www.baiscope.lk/)
 
-Usage
-
-Navigate to Baiscope.lk.
-
-Use the toggle button to enable or disable auto-download.
-
-Click the down-arrow button to open all <td> links in new tabs.
